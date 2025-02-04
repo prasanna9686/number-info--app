@@ -1,0 +1,160 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://media.istockphoto.com/id/178895760/photo/an-abstract-blue-pattern-with-numbers.jpg?s=612x612&w=0&k=20&c=1ln1nhLfTB9w3EFGEXVRS7BG9S1rCK6RrrMpR_kXmrM=') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 50, 100, 0.8), rgba(0, 100, 200, 0.8));
+    border-radius: 0 0 15px 15px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+/* Navbar Content */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-right: 20px;
+    transition: color 0.3s ease, background 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #007bff, #00a2ff);
+    box-shadow: 0 4px 10px rgba(0, 170, 255, 0.4);
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffeb3b !important;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #ffeb3b;
+}
+
+/* Fixed Centered Box Styling */
+.container {
+    backdrop-filter: blur(10px);
+    background: rgba(0, 50, 100, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Default width for mobile */
+    max-width: 400px; /* Limit max width */
+    color: white;
+    text-align: center;
+    position: fixed;
+    top: 120px; /* Add space from the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Heading and Paragraph Styling */
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Form and Inputs */
+input, select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+select {
+    background-color: rgba(0, 100, 200, 0.6);
+    color: white;
+}
+
+button {
+    background: linear-gradient(135deg, #007bff, #00a2ff);
+    color: white;
+    font-size: 1.1rem;
+    transition: background 0.5s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00a2ff, #007bff);
+}
+
+/* Fact Display */
+#factDisplay {
+    margin-top: 20px;
+    background-color: rgba(0, 100, 200, 0.7);
+    padding: 20px;
+    border-radius: 8px;
+    animation: fadeInUp 1.5s ease-in-out;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+#factText {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #ffeb3b;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}
